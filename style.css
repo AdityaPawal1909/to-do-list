@@ -1,0 +1,33 @@
+body{
+    background-image: url("img1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card{
+    max-width:700px;
+    margin:auto;
+    border-radius:15px;
+    background: rgba(255,255,255,0.9);
+}
+
+.list-group-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:18px;
+}
+
+.deleteBtn{
+    background:red;
+    color:white;
+    border:none;
+    padding:6px 12px;
+    border-radius:5px;
+}
+
+.deleteBtn:hover{
+    background:darkred;
+}
