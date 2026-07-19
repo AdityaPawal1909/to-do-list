@@ -1,33 +1,194 @@
-body{
-    background-image: url("img1.jpg");
+/* ==========================
+   BODY
+========================== */
+body {
+    background-color: #f8f9fa;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    transition: 0.4s;
 }
 
-.card{
-    max-width:700px;
-    margin:auto;
-    border-radius:15px;
-    background: rgba(255,255,255,0.9);
+/* ==========================
+   CARD
+========================== */
+.card {
+    max-width: 750px;
+    margin: auto;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
 }
 
-.list-group-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:18px;
+/* ==========================
+   INPUTS
+========================== */
+.form-control {
+    border-radius: 10px;
 }
 
-.deleteBtn{
-    background:red;
-    color:white;
-    border:none;
-    padding:6px 12px;
-    border-radius:5px;
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #0d6efd;
 }
 
-.deleteBtn:hover{
-    background:darkred;
+/* ==========================
+   TASK LIST
+========================== */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.list-group-item:hover {
+    transform: scale(1.01);
+}
+
+/* ==========================
+   TASK INFO
+========================== */
+.task-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* ==========================
+   TASK TITLE
+========================== */
+.task-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ==========================
+   DATE
+========================== */
+.task-date {
+    font-size: 13px;
+    color: gray;
+}
+
+/* ==========================
+   BUTTON GROUP
+========================== */
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+.completeBtn {
+    background: #198754;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.completeBtn:hover {
+    background: #157347;
+}
+
+.editBtn {
+    background: #ffc107;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.editBtn:hover {
+    background: #e0a800;
+}
+
+.deleteBtn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.deleteBtn:hover {
+    background: #bb2d3b;
+}
+
+/* ==========================
+   COMPLETED TASK
+========================== */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: gray;
+}
+
+/* ==========================
+   FILTER BUTTONS
+========================== */
+.filterBtn {
+    flex: 1;
+}
+
+/* ==========================
+   COUNTER
+========================== */
+#totalCount,
+#completedCount,
+#pendingCount {
+    font-weight: bold;
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .card {
+    background: #1f1f1f;
+    color: white;
+}
+
+.dark-mode .list-group-item {
+    background: #2b2b2b;
+    color: white;
+    border-color: #444;
+}
+
+.dark-mode .form-control {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #bbb;
+}
+
+.dark-mode .task-date {
+    color: #cfcfcf;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media(max-width:768px) {
+    .task-buttons {
+        flex-direction: column;
+    }
+
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 }
